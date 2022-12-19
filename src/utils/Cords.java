@@ -4,7 +4,7 @@ public class Cords {
     private int x;
     private int y;
 
-    Cords(int x, int y){
+    public Cords(int x, int y){
         this.x = x;
         this.y = y;
     }
@@ -12,6 +12,8 @@ public class Cords {
     public int getDistanceFrom(Cords other){
         return (int) Math.sqrt(Math.pow(this.x - other.x, 2) + Math.pow(this.y - other.y, 2));
     }
+
+    public double getLength() {return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));}
 
     public int getX() {
         return x;
@@ -27,5 +29,9 @@ public class Cords {
 
     public void setY(int y) {
         this.y = y;
+    }
+
+    public String toString(){
+        return "(" + x + ", " + y + ")";
     }
 }
